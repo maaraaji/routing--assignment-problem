@@ -4,7 +4,7 @@ import Courses from './containers/Courses/Courses';
 // import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +20,7 @@ class App extends Component {
         <Switch>
           <Route path='/users' exact component={Users}/>
           <Route path='/courses' component={Courses} />
+          <Route render={() => <h1>Page not found</h1>}/>
         </Switch>
       </div>
     );
