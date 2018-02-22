@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
-import Course from './containers/Course/Course';
+// import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 import { Route, Link, Switch } from 'react-router-dom';
@@ -19,8 +19,7 @@ class App extends Component {
         </nav>
         <Switch>
           <Route path='/users' exact component={Users}/>
-          <Route path='/courses' exact component={Courses} />
-          <Route path={'/:id'} exact component={Course}/>
+          <Route path='/courses' component={Courses} />
         </Switch>
       </div>
     );
